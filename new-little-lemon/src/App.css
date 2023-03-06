@@ -1,3 +1,4 @@
+/* Originally from creat react */
 .App {
   text-align: center;
 }
@@ -35,4 +36,151 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Little Lemon css */
+/* General Styling */
+
+h1, h2 {
+  font-family: 'Markazi Text', serif;
+}
+
+input {
+  font-family: "karla", sans-serif;
+  font-size: 15px;
+  color: #333333;
+}
+
+/* Header Styling */
+
+.cta-button {
+  background-color: #f4ce14;
+  color: #333333;
+  border-radius: 5px;
+  padding: 15px 30px;
+  font-size: 18pt;
+  font-weight: 600;
+  border: none;
+}
+
+.hero-background {
+  background-color: #495e57;
+  width: 100%;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  margin: 0 auto;
+  padding: 60px 0;
+  color: #fff;
+}
+
+.hero-text h1 {
+  font-size: 50px;
+}
+
+.hero-text h2 {
+  font-size: 34px;
+}
+
+.hero-text p {
+  font-size: 20px;
+}
+
+.hero-image {
+  width: 375px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 325px;
+  border-radius: 5px;
+  overflow:hidden;
+}
+
+.hero-image > img {
+  right: 0;
+  width: 375px;
+  height: 325px;
+}
+
+/* Specials */
+
+.specials-section-container {
+  width: 85%;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+.specials-section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.specials-section-title h1 {
+  line-height: 0.8;
+  margin: 20px 0 20px;
+  font-size: 50px;
+}
+
+/* SpecialsCards */
+.special-card {
+  /*display: grid;*/
+  grid-template-columns: 31% 31% 31%;
+  gap: 35px;
+  margin-top: 20px;
+}
+
+.special-card-container {
+  background-color: #edefee;
+  border-radius: 20px 20px 0 0;
+}
+
+.special-card-image-container {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  border-radius: 20px 20px 0 0;
+}
+
+.special-card-image-container img {
+  width: 100%;
+  height: 400px;
+}
+
+.special-card-text {
+  padding: 30px 20px 40px;
+}
+
+.special-card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: "center"
+}
+
+.special-card-title h3 {
+  font-weight: bold;
+  font-size: 16pt;
+  display: flex;
+  align-items: center;
+}
+
+.price-tag {
+  color: #ee9972;
+}
+
+.special-card-text p {
+  font-size: 16pt;
+  line-height: 1.5;
+  margin: 30px 0 50px;
+  color: #495e57;
+}
+
+.special-card-text a {
+  font-weight: bold;
 }

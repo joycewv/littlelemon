@@ -4,7 +4,7 @@ import SpecialsCard from './SpecialsCard'
 const menus  =[
     {
         title: "Greek Salad",
-        description: "The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.",
+        description: "The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with garlic and rosemary croutons.",
         price: "$12.99",
         getImageSrc: () => require("../assets/greeksalad.jpg")
     },
@@ -35,7 +35,7 @@ const Specials = () => {
             <br></br>
             <Box
              display="grid"
-             gridTemplateColumns="repeat(2,minmax(0,1fr))"
+             gridTemplateColumns="repeat(3,minmax(0,1fr))"
              gridGap={8}>
                 {menus.map((menu) => (
                     <SpecialsCard

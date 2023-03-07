@@ -29,19 +29,19 @@ const BookingForm = () => {
 
     return (
         <>
-        <h1>Testing: This is a booking form</h1>
-        <section
+        <Box
          isDarkBackground
-         backgroundColor="#512DA8"
+         backgroundColor="#495e57"
          py={16}
-         spacing={8}>
+         spacing={8}
+         >
             <VStack w="1024px" p={32} alignItems="flex-start">
-                <Heading as="h1" id="booking-form">
+                <Heading as="h1" id="booking-form" color="#fff">
                     Reserve a Table
                 </Heading>
-                <Box p={6} rounded="md" w="100%">
+                <Box p={6} rounded="md" w="100%" color="#fff">
                     <form onSubmit={formik.handleSubmit}>
-                        <VStack spacing={4}>
+                        <VStack spacing={8} fontSize="18pt">
                             <FormControl isInvalid={!!formik.errors.firstName && formik.touched.firstName}>
                                 <FormLabel htmlFor="firstName">Name</FormLabel>
                                 <input id="firstName" name="firstName" {...formik.getFieldProps("firstName")} />
@@ -70,12 +70,22 @@ const BookingForm = () => {
                                 </select>
                                  <FormErrorMessage>{formik.errors.time}</FormErrorMessage>
                             </FormControl>
-                            <Button type="submit" colorScheme="yellow" width="full">Make Your Reservation</Button>
+                            <Button
+                             type="submit"
+                             colorScheme="yellow"
+                             width="45%"
+                             fontSize="18pt"
+                             fontWeight="600"
+                             color="#333333"
+                             backgroundColor="#f4ce14"
+                             padding="30pt"
+                             borderRadius="5pt"
+                             >Make Your Reservation</Button>
                         </VStack>
                     </form>
                 </Box>
             </VStack>
-        </section>
+        </Box>
         </>
 
     );

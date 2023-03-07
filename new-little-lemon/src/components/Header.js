@@ -1,6 +1,18 @@
 /**import {Link} from 'react-router-dom'; */
 
 const Header = () => {
+
+    const handleClick =(button) => () => {
+        const id = `${button}-form`;
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+            });
+        }
+    }
+
     return (
         <>
         <header className="hero-background">
@@ -12,7 +24,7 @@ const Header = () => {
                     on traditional recipes served with a modern twist.</p>
                     <br></br>
                     <br></br>
-                    <button className='cta-button'>Reserve a Table</button>
+                    <button className='cta-button' href="#booking" onClick={handleClick("booking")}>Reserve a Table</button>
                 </section>
                 <section className="hero-image">
                     <img src={require('../assets/restaurantfood.jpg')} alt="Little Lemon restaurant cuisine"/>

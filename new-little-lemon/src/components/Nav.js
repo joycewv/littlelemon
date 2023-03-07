@@ -1,6 +1,18 @@
 import { Box, HStack } from "@chakra-ui/react";
 
 const Nav = () => {
+
+    const handleClick =(anchor) => () => {
+        const id = `${anchor}-form`;
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+            });
+        }
+    }
+
     return (
         <>
         <h1>This is a Nav</h1>
@@ -27,7 +39,7 @@ const Nav = () => {
                         <a href="/">Home</a>
                         <a href="/about">About</a>
                         <a href="/menu">Menu</a>
-                        <a href="reservation">Reservation</a>
+                        <a href="#booking" onClick={handleClick("booking")}>Reservation</a>
                         <a href="orderonline">Order Online</a>
                         <a href="login">Login</a>
                         </HStack>

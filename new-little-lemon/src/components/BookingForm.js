@@ -35,11 +35,11 @@ const BookingForm = () => {
          py={16}
          spacing={8}
          >
-            <VStack w="1024px" p={32} alignItems="flex-start">
-                <Heading as="h1" id="booking-form" color="#fff">
+            <VStack w="1024px" p={24} alignItems="flex-start">
+                <Heading as="h1" id="booking-form" color="#edefee">
                     Reserve a Table
                 </Heading>
-                <Box p={6} rounded="md" w="100%" color="#fff">
+                <Box p={6} rounded="md" w="100%" color="#edefee">
                     <form onSubmit={formik.handleSubmit}>
                         <VStack spacing={8} fontSize="18pt">
                             <FormControl isInvalid={!!formik.errors.firstName && formik.touched.firstName}>

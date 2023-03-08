@@ -1,4 +1,5 @@
 /**import {Link} from 'react-router-dom'; */
+import { Box, Button, Heading, HStack, Img, VStack, Text,} from "@chakra-ui/react"; 
 
 const Header = () => {
 
@@ -15,6 +16,40 @@ const Header = () => {
 
     return (
         <>
+        <Box
+         isDarkBackground
+         backgroundColor="#495e57"
+         alignItems="flex-start"
+         spacing={8}
+         py={16}
+        >
+            <HStack
+             p={24} 
+             alignItems="flex-start"
+            >
+                <VStack>
+                    <Heading as="h1" color="#edefee">Little Memon</Heading>
+                    <Heading as="h2" color="#edefee">Chicago</Heading>
+                    <Text fontSize="xl" color="#edefee">We are a family owned Mediterranean restaurant, located on  Maldove Street in Chicago, Illionis. We focus
+                    on traditional recipes served with a modern twist.</Text>
+                    <Button
+                     onClick={handleClick("booking")}
+                     colorScheme="yellow"
+                     width="45%"
+                     fontSize="18pt"
+                     fontWeight="600"
+                     color="#333333"
+                     backgroundColor="#f4ce14"
+                     padding="25pt"
+                     borderRadius="5pt"
+                    >Reserve a Table</Button>
+                </VStack>
+            </HStack>
+            <HStack>
+                <Img src='../assets/restrantfood.jpg'/>
+            </HStack>
+
+        </Box>
         <header className="hero-background">
             <article className="hero-container">
                 <section className="hero-text">

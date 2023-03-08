@@ -1,4 +1,4 @@
-import { Box, Heading, HStack, VStack, Button } from '@chakra-ui/react';
+import { Box, Heading, HStack, VStack, Button, Spacer } from '@chakra-ui/react';
 import SpecialsCard from './SpecialsCard'
 
 const menus  =[
@@ -33,8 +33,18 @@ const Specials = () => {
          spacing={8}
          >
             <Box>
-                <HStack>
-                    <Heading as="h1" id="onlinemenu-form" color="#495e57">This Weeks Specials</Heading>
+                <HStack
+                 minWidth="max-content"
+                 alignItems='center'
+                 gap='2'
+                >
+                    <Heading
+                     as="h1"
+                     id="onlinemenu-form"
+                     color="#495e57"
+                     >
+                        This Weeks Specials</Heading>
+                    <Spacer />
                     <Button
                      colorScheme="yellow"
                      width="45%"

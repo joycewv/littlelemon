@@ -78,9 +78,10 @@ const BookingForm = () => {
                              fontWeight="600"
                              color="#333333"
                              backgroundColor="#f4ce14"
-                             padding="30pt"
+                             padding="25pt"
                              borderRadius="5pt"
-                             >Make Your Reservation</Button>
+                             >
+                                Make Your Reservation</Button>
                         </VStack>
                     </form>
                 </Box>

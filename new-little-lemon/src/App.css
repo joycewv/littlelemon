@@ -73,8 +73,13 @@ input {
   justify-content: space-between;
   width: 85%;
   margin: 0 auto;
-  padding: 60px 0;
+  padding: 150px 0;
   color: #fff;
+}
+
+.hero-text {
+  padding-right: 0px;
+  
 }
 
 .hero-text h1 {
@@ -126,15 +131,16 @@ input {
   font-size: 50px;
 }
 
-/* SpecialsCards */
-.special-card {
-  /*display: grid;*/
+/* SpecialsCards not in use */
+
+/* .special-card {
+
   grid-template-columns: 31% 31% 31%;
   gap: 35px;
   margin-top: 20px;
-}
+} */
 
-.special-card-container {
+/* .special-card-container {
   background-color: #edefee;
   border-radius: 20px 20px 0 0;
 }
@@ -184,6 +190,7 @@ input {
 .special-card-text a {
   font-weight: bold;
 }
+*/
 
 /* BookingForm */
 

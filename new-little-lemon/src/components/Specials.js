@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/react';
+import { Box, Heading, HStack, VStack, Button } from '@chakra-ui/react';
 import SpecialsCard from './SpecialsCard'
 
 const menus  =[
@@ -25,14 +25,29 @@ const menus  =[
 const Specials = () => {
     return (
         <>
-        <section className="specials-section-container">
-            <article className="specials-section-title">
-                <h1>This Weeks Specials</h1>
-                <section>
-                    <button className='cta-button'>Online Menu</button>
-                </section>
-            </article>
-            <br></br>
+        <VStack
+         backgroundColor="#edefee"
+         isDarkBackground
+         p={8}
+         alignItems="flex-start"
+         spacing={8}
+         >
+            <Box>
+                <HStack>
+                    <Heading as="h1" id="onlinemenu-form" color="#495e57">This Weeks Specials</Heading>
+                    <Button
+                     colorScheme="yellow"
+                     width="45%"
+                     fontSize="18pt"
+                     fontWeight="600"
+                     color="#333333"
+                     backgroundColor="#f4ce14"
+                     padding="25pt"
+                     borderRadius="5pt"
+                     >
+                        Online Menu</Button>
+                </HStack>
+            </Box>
             <Box
              display="grid"
              gridTemplateColumns="repeat(3,minmax(0,1fr))"
@@ -47,7 +62,7 @@ const Specials = () => {
                     />
                 ))}
             </Box>
-        </section>
+        </VStack>
         </>
     )
 }

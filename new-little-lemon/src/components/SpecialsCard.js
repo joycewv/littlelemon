@@ -1,30 +1,22 @@
+import { VStack, Image, Heading, Text, HStack } from "@chakra-ui/react"
 
 
 const SpecialsCard = ({title, description, imageSrc, price}) => {
     return (
         <>
-        <section className="special-card">
-            <section className="special-card-container" cursor="pointer">
-                <article className="special-card-image-container">
-                    <img src={imageSrc} alt={title}/>
-                </article>
-                <article className="special-card-text">
-                    <section className="special-card-title">
-                        <h3>{title}</h3>
-                        <h3 className="price-tag">{price}</h3>
-                    </section>
-                    <section>
-                        <p>{description}</p>
-                    </section>
-                    <section>
-                        <a href="/">Order a delivery</a>
-                    </section>
-
-                </article>
-
-            </section>
-
-        </section>
+        <VStack color="black" backgroundColor="white" cursor="pointer" borderRadius="xl">
+            <Image src={imageSrc} alt={title} borderRadius="xl"/>
+            <VStack spacing={4} p={4} alignItems="flex-start">
+                <HStack justifyContent="space-between" alignItems="center" spacing={20}>
+                    <Heading as="h3" size="md">{title}</Heading>
+                    <Heading as="h3" size="md" color="#ee9972">{price}</Heading>
+                </HStack>
+                <Text color="#495e57" fontSize="lg">{description}</Text>
+                <HStack>
+                    <p spacing={2} alignItems="center">Order a delivery</p>
+                </HStack>
+            </VStack>
+        </VStack>
         </>
     )
 }

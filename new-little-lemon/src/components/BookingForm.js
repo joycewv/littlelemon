@@ -1,4 +1,4 @@
-import { VStack, Heading, Box, FormControl, FormLabel, FormErrorMessage, Button } from "@chakra-ui/react";
+import { VStack, Heading, Box, FormControl, FormLabel, FormErrorMessage, Button, Flex } from "@chakra-ui/react";
 import { useFormik } from "formik";
 /*import { useSubmit } from "react-router-dom";*/
 import * as Yup from 'yup';
@@ -29,17 +29,19 @@ const BookingForm = () => {
 
     return (
         <>
-        <Box
+        <Flex
          isDarkBackground
          backgroundColor="#495e57"
          py={16}
          spacing={8}
+         justifyContent="center"
+         alignItems="center"
          >
-            <VStack w="1024px" p={24} alignItems="flex-start">
+            <VStack w="1024px" p={24} alignItems="center" justifyContent="center" >
                 <Heading as="h1" id="booking-form" color="#edefee">
                     Reserve a Table
                 </Heading>
-                <Box p={6} rounded="md" w="100%" color="#edefee">
+                <Box p={8} rounded="md" w="100%" color="#edefee" boxShadow={'lg'}>
                     <form onSubmit={formik.handleSubmit}>
                         <VStack spacing={8} fontSize="18pt">
                             <FormControl isInvalid={!!formik.errors.firstName && formik.touched.firstName}>
@@ -86,7 +88,7 @@ const BookingForm = () => {
                     </form>
                 </Box>
             </VStack>
-        </Box>
+        </Flex>
         </>
 
     );

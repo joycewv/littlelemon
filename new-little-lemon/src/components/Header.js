@@ -1,4 +1,4 @@
-import {Button, Heading, HStack, VStack, Text, Spacer, Flex, Image} from "@chakra-ui/react"; 
+import {Button, Heading, HStack, VStack, Text, Spacer, Flex, Image} from "@chakra-ui/react";
 
 const Header = () => {
 

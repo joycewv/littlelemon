@@ -1,5 +1,6 @@
-import { Box, Heading, HStack, VStack, Button, Spacer } from '@chakra-ui/react';
+import { Box, Heading, VStack, Button, Spacer, Flex } from '@chakra-ui/react';
 import SpecialsCard from './SpecialsCard'
+/** alignment of the button can improve */
 
 const menus  =[
     {
@@ -29,19 +30,21 @@ const Specials = () => {
          backgroundColor="#edefee"
          isDarkBackground
          p={8}
-         alignItems="flex-start"
+         alignItems="center"
          spacing={8}
          >
-            <Box>
-                <HStack
+            <Box alignItems="flex-start">
+                <Flex
                  minWidth="max-content"
-                 alignItems='center'
+                 alignItems="center"
                  gap='2'
                 >
                     <Heading
                      as="h1"
                      id="onlinemenu-form"
                      color="#495e57"
+                     minWidth="max-content"
+                     alignItems="flex-start"
                      >
                         This Weeks Specials</Heading>
                     <Spacer />
@@ -54,9 +57,11 @@ const Specials = () => {
                      backgroundColor="#f4ce14"
                      padding="25pt"
                      borderRadius="5pt"
+                     minWidth="max-content"
+                     alignItems="center"
                      >
                         Online Menu</Button>
-                </HStack>
+                </Flex>
             </Box>
             <Box
              display="grid"

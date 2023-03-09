@@ -1,5 +1,4 @@
-/**import {Link} from 'react-router-dom'; */
-import { Box, Button, Heading, HStack, Img, VStack, Text,} from "@chakra-ui/react"; 
+import {Button, Heading, HStack, VStack, Text, Spacer, Flex, Image} from "@chakra-ui/react"; 
 
 const Header = () => {
 
@@ -16,22 +15,27 @@ const Header = () => {
 
     return (
         <>
-        <Box
+        <Flex
          isDarkBackground
          backgroundColor="#495e57"
-         alignItems="flex-start"
+         alignItems="center"
          spacing={8}
          py={16}
         >
             <HStack
-             p={24} 
+             p={24}
              alignItems="flex-start"
             >
-                <VStack>
-                    <Heading as="h1" color="#edefee">Little Memon</Heading>
-                    <Heading as="h2" color="#edefee">Chicago</Heading>
-                    <Text fontSize="xl" color="#edefee">We are a family owned Mediterranean restaurant, located on  Maldove Street in Chicago, Illionis. We focus
-                    on traditional recipes served with a modern twist.</Text>
+                <VStack alignItems="flex-start" minWidth="max-content">
+                    <Heading as="h1" color="#edefee" gap='4'>Little Memon</Heading>
+                    <Spacer />
+                    <Heading as="h4" color="#edefee">Chicago</Heading>
+                    <Spacer />
+                    <Text fontSize="xl" color="#edefee">We are a family owned Mediterranean restaurant, </Text>
+                    <Text fontSize="xl" color="#edefee">located on  Maldove Street in Chicago, Illionis. We focus
+                    on traditional recipes served with a</Text>
+                    <Text fontSize="xl" color="#edefee">modern twist.</Text>
+                    <Spacer />
                     <Button
                      onClick={handleClick("booking")}
                      colorScheme="yellow"
@@ -45,27 +49,16 @@ const Header = () => {
                     >Reserve a Table</Button>
                 </VStack>
             </HStack>
-            <HStack>
-                <Img src='../assets/restrantfood.jpg'/>
+            <Spacer />
+            <HStack p={24} minWidth="max-content" alignItems='center'>
+                <Image
+                 src="/restaurantfood.jpg"
+                 alt="Little Lemon restaurant cuisine"
+                 objectFit="cover"
+                 boxSize="325px"
+                 />
             </HStack>
-
-        </Box>
-        <header className="hero-background">
-            <article className="hero-container">
-                <section className="hero-text">
-                    <h1>Little Lemon</h1>
-                    <h2>Chicago</h2>
-                    <p>We are a family owned Mediterranean restaurant, located on  Maldove Street in Chicago, Illionis. We focus
-                    on traditional recipes served with a modern twist.</p>
-                    <br></br>
-                    <br></br>
-                    <button className='cta-button' href="#booking" onClick={handleClick("booking")}>Reserve a Table</button>
-                </section>
-                <section className="hero-image">
-                    <img src={require('../assets/restaurantfood.jpg')} alt="Little Lemon restaurant cuisine"/>
-                </section>
-            </article>
-        </header>
+        </Flex>
         </>
     )
 }

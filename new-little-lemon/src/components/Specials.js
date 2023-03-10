@@ -49,16 +49,16 @@ const Specials = () => {
                         This Weeks Specials</Heading>
                     <Spacer />
                     <Button
-                     colorScheme="yellow"
                      width="45%"
                      fontSize="18pt"
                      fontWeight="600"
                      color="#333333"
-                     backgroundColor="#f4ce14"
                      padding="25pt"
                      borderRadius="5pt"
                      minWidth="max-content"
                      alignItems="center"
+                     bg={'#f4ce14'}
+                     _hover={{bg:'yellow.500'}}
                      >
                         Online Menu</Button>
                 </Flex>

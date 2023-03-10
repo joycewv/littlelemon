@@ -1,4 +1,4 @@
-import { VStack, Heading, Box, FormControl, FormLabel, FormErrorMessage, Button, Flex } from "@chakra-ui/react";
+import { VStack, Heading, Box, FormControl, FormLabel, FormErrorMessage, Button, Flex,} from "@chakra-ui/react";
 import { useFormik } from "formik";
 /*import { useSubmit } from "react-router-dom";*/
 import * as Yup from 'yup';
@@ -37,13 +37,13 @@ const BookingForm = () => {
          justifyContent="center"
          alignItems="center"
          >
-            <VStack w="1024px" p={24} alignItems="center" justifyContent="center" >
+            <VStack w="1024px" p={16} alignItems="center" justifyContent="center">
                 <Heading as="h1" id="booking-form" color="#edefee">
                     Reserve a Table
                 </Heading>
-                <Box p={8} rounded="md" w="100%" color="#edefee" boxShadow={'lg'}>
+                <Box p={8} rounded="lg" w="100%" boxShadow={'lg'} backgroundColor={'gray.100'}>
                     <form onSubmit={formik.handleSubmit}>
-                        <VStack spacing={8} fontSize="18pt">
+                        <VStack spacing={8} fontSize={'lg'}>
                             <FormControl isInvalid={!!formik.errors.firstName && formik.touched.firstName}>
                                 <FormLabel htmlFor="firstName">Name</FormLabel>
                                 <input id="firstName" name="firstName" {...formik.getFieldProps("firstName")} />
@@ -51,7 +51,7 @@ const BookingForm = () => {
                             </FormControl>
                             <FormControl isInvalid={!!formik.errors.email && formik.touched.email}>
                                 <FormLabel htmlFor="email">Email Address</FormLabel>
-                                <input id="email" name="email" type="email" {...formik.getFieldProps("email")}/>
+                                <input id="email" name="email" type="email" placeholder="email@example.com" {...formik.getFieldProps("email")}/>
                                 <FormErrorMessage>{formik.errors.email}</FormErrorMessage>
                             </FormControl>
                             <FormControl isInvalid={!!formik.errors.guests && formik.touched.guests}>
@@ -74,14 +74,14 @@ const BookingForm = () => {
                             </FormControl>
                             <Button
                              type="submit"
-                             colorScheme="yellow"
                              width="45%"
                              fontSize="18pt"
                              fontWeight="600"
                              color="#333333"
-                             backgroundColor="#f4ce14"
                              padding="25pt"
                              borderRadius="5pt"
+                             bg={'#f4ce14'}
+                             _hover={{bg:'yellow.500'}}
                              >
                                 Make Your Reservation</Button>
                         </VStack>

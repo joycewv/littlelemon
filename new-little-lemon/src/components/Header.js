@@ -38,14 +38,14 @@ const Header = () => {
                     <Spacer />
                     <Button
                      onClick={handleClick("booking")}
-                     colorScheme="yellow"
                      width="45%"
                      fontSize="18pt"
                      fontWeight="600"
                      color="#333333"
-                     backgroundColor="#f4ce14"
                      padding="25pt"
                      borderRadius="5pt"
+                     bg={'#f4ce14'}
+                     _hover={{bg:'yellow.500'}}
                     >Reserve a Table</Button>
                 </VStack>
             </HStack>

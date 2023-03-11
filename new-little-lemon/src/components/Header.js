@@ -17,45 +17,47 @@ const Header = () => {
         <>
         <Flex
          isDarkBackground
-         backgroundColor="#495e57"
-         alignItems="center"
+         bg={'#495e57'}
+         alignItems={''}
          spacing={8}
          py={16}
+         p={4}
         >
             <HStack
-             p={24}
-             alignItems="flex-start"
+             p={10}
+             py={4}
             >
-                <VStack alignItems="flex-start" minWidth="max-content">
-                    <Heading as="h1" color="#edefee" gap='4'>Little Memon</Heading>
+                <VStack alignItems={'flex-start'} minWidth="max-content">
+                    <Heading as="h1" color={'#edefee'} gap='4'>Little Memon</Heading>
                     <Spacer />
-                    <Heading as="h4" color="#edefee">Chicago</Heading>
+                    <Heading fontSize={'2xl'} color={'#edefee'}>Chicago</Heading>
                     <Spacer />
-                    <Text fontSize="xl" color="#edefee">We are a family owned Mediterranean restaurant, </Text>
-                    <Text fontSize="xl" color="#edefee">located on  Maldove Street in Chicago, Illionis. We focus
-                    on traditional recipes served with a</Text>
-                    <Text fontSize="xl" color="#edefee">modern twist.</Text>
+                    <Text fontSize={'lg'} color={'#edefee'}>We are a family owned Mediterranean restaurant, </Text>
+                    <Text fontSize={'lg'} color={'#edefee'}>located on  Maldove Street in Chicago, Illionis. We focus
+                    on traditional recipes</Text>
+                    <Text fontSize={'lg'} color={'#edefee'}>served with a modern twist.</Text>
+                    <Spacer />
+                    <Spacer />
                     <Spacer />
                     <Button
                      onClick={handleClick("booking")}
-                     width="45%"
-                     fontSize="18pt"
-                     fontWeight="600"
-                     color="#333333"
-                     padding="25pt"
-                     borderRadius="5pt"
+                     color={'#333333'}
+                     size={'lg'}
                      bg={'#f4ce14'}
                      _hover={{bg:'yellow.500'}}
                     >Reserve a Table</Button>
                 </VStack>
             </HStack>
             <Spacer />
-            <HStack p={24} minWidth="max-content" alignItems='center'>
+            <HStack p={10} py={40} spacing={8} minWidth="max-content" alignItems={'center'}>
                 <Image
-                 src="/restaurantfood.jpg"
-                 alt="Little Lemon restaurant cuisine"
-                 objectFit="cover"
+                 src={'/restaurantfood.jpg'}
+                 alt={'Little Lemon restaurant cuisine'}
+                 objectFit={'cover'}
                  boxSize="325px"
+                 rounded={'lg'}
+                 alignItems={'center'}
+                 justifyContent={'center'}
                  />
             </HStack>
         </Flex>

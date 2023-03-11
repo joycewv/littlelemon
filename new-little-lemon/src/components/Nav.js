@@ -1,4 +1,4 @@
-import { Box, HStack } from "@chakra-ui/react";
+import { Box, HStack, Image, Link } from "@chakra-ui/react";
 import { useEffect, useRef } from "react";
 
 const Nav = () => {
@@ -27,8 +27,8 @@ const Nav = () => {
         }
     }, []);
 
-    const handleClick =(anchor) => () => {
-        const id = `${anchor}-form`;
+    const handleClick =(Link) => () => {
+        const id = `${Link}-form`;
         const element = document.getElementById(id);
         if (element) {
             element.scrollIntoView({
@@ -46,32 +46,32 @@ const Nav = () => {
              left={0}
              right={0}
              translateY={0}
-             transitionProperty="transform"
-             transitionDuration=".3s"
-             transitionTimingFunction="ease-in-out"
-             backgroundColor="#EDEFEE"
+             transitionProperty={'transform'}
+             transitionDuration= {'.3s'}
+             transitionTimingFunction= {'ease-in-out'}
+             bg={'#edefee'}
              ref={headerRef}
              >
             <Box color="#333333" maxWidth="1280px" margin="0 auto">
                 <HStack
                   px={16}
                   py={4}
-                  justifyContent="space-between"
-                  alignItems="center"
+                  justifyContent={'space-between'}
+                  alignItems={'center'}
                   >
                     <nav>
-                        <HStack spacing={8}>
-                        <a href="/">Home</a>
-                        <a href="/about">About</a>
-                        <a href="/menu">Menu</a>
-                        <a href="#booking" onClick={handleClick("booking")}>Reservation</a>
-                        <a href="orderonline">Order Online</a>
-                        <a href="login">Login</a>
+                        <HStack spacing={8} fontSize={'lg'}>
+                            <Link href={'#'}>Home</Link>
+                            <Link href={'/about'}>About</Link>
+                            <Link href={'/menu'}>Menu</Link>
+                            <Link onClick={handleClick("booking")}>Reservations</Link>
+                            <Link href={'/orderonline'}>Order onlines</Link>
+                            <Link href={'login'}>Login</Link>
                         </HStack>
                     </nav>
                     <nav>
                         <HStack>
-                            <img src={require('../assets/logo.png')} alt="logo" width="200" height="55" />
+                            <Image src={require('../assets/logo.png')} alt={'logo'} width={'200'} height={'55'} />
                         </HStack>
                     </nav>
                 </HStack>
@@ -81,25 +81,5 @@ const Nav = () => {
     )
 }
 
-/**
- *
-                        <nav>
-                            <HStack>
-                            <a href="/">Home</a>
-                            <a href="/about">About</a>
-                            <a href="/menu">Menu</a>
-                            <a href="reservation">Reservation</a>
-                            <a href="orderonline">Order Online</a>
-                            <a href="login">Login</a>
-                            </HStack>
-                        </nav>
-                    </HStack>
-
-                </Box>
-            </Box>
- */
-/**
- * 
- */
 
 export default Nav

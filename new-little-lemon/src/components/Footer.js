@@ -2,8 +2,8 @@ import { Box, Container, SimpleGrid, Stack, Image, Text, Link, Flex} from "@chak
 
 const Footer = () => {
 
-    const handleClick =(button) => () => {
-        const id = `${button}-form`;
+    const handleClick =(Link) => () => {
+        const id = `${Link}-form`;
         const element = document.getElementById(id);
         if (element) {
             element.scrollIntoView({
@@ -39,11 +39,11 @@ const Footer = () => {
                     <Stack align={'flex-start'}>
                         <Text fontWeight={'500'} fontSize={'2xl'} mb={2}>Company</Text>
                         <Link href={'#'}>Home</Link>
-                        <Link href={'#'}>About</Link>
-                        <Link href={'#'}>Menu</Link>
+                        <Link href={'/about'}>About</Link>
+                        <Link href={'/menu'}>Menu</Link>
                         <Link onClick={handleClick("booking")}>Reservations</Link>
-                        <Link href={'#'}>order Onlines</Link>
-                        <Link href={'#'}>Login</Link>
+                        <Link href={'/orderonline'}>Order onlines</Link>
+                        <Link href={'login'}>Login</Link>
                     </Stack>
                     <Stack align={'flex-start'}>
                         <Text fontWeight={'500'} fontSize={'2xl'} mb={2}>Contact Us</Text>

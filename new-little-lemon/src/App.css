@@ -79,7 +79,6 @@ input {
 
 .hero-text {
   padding-right: 0px;
-  
 }
 
 .hero-text h1 {
@@ -114,7 +113,7 @@ input {
 
 /* Specials */
 
-.specials-section-container {
+/* .specials-section-container {
   width: 85%;
   margin: 0 auto;
   padding: 100px 0;
@@ -130,7 +129,7 @@ input {
   line-height: 0.8;
   margin: 20px 0 20px;
   font-size: 50px;
-}
+} */
 
 /* SpecialsCards not in use */
 

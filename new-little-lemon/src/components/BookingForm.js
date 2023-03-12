@@ -22,7 +22,6 @@ const BookingForm = () => {
         email: Yup.string().email("Invalid email address").required("Required"),
         guests: Yup.string().min(1,"Must be at least 1 guest").max(10,"Please call us if you have more than 10 guests").required("Required"),
         time: Yup.string().required("Required"),
-        
     }),
  });
 

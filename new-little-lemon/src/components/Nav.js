@@ -1,5 +1,7 @@
-import { Box, HStack, Image, Link } from "@chakra-ui/react";
+import { Box, HStack, Image} from "@chakra-ui/react";
 import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
+
 
 const Nav = () => {
 
@@ -61,12 +63,12 @@ const Nav = () => {
                   >
                     <nav>
                         <HStack spacing={8} fontSize={'lg'}>
-                            <Link href={'#'}>Home</Link>
-                            <Link href={'/about'}>About</Link>
-                            <Link href={'/menu'}>Menu</Link>
+                            <Link to="/">Home</Link>
+                            <Link to="/about">About</Link>
+                            <Link to="/menu">Menu</Link>
                             <Link onClick={handleClick("booking")}>Reservations</Link>
-                            <Link href={'/orderonline'}>Order onlines</Link>
-                            <Link href={'login'}>Login</Link>
+                            <Link to="/orderonlines">Order onlines</Link>
+                            <Link to='/login'>Login</Link>
                         </HStack>
                     </nav>
                     <nav>

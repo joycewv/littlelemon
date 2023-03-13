@@ -2,13 +2,6 @@
 
 This project in the final project assessment of Front-End Developer Capstone Course for Meta Front-End Developer Professional Certificate Program on Coursera.
 
-## Screenshot
-
-### Placeholder
-### Placeholder
-### Placeholder
-
-
 ### Tech Stack:
 * React
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from '../Header';
 import Nav from '../Nav';
 
 const AboutPage =() => {
@@ -7,12 +6,11 @@ const AboutPage =() => {
         <>
         <div>
             <Nav></Nav>
-            <Header></Header>
-            <div>This is a About Page 1</div>
-            <div>This is a About Page 2</div>
-            <div>This is a About Page 3</div>
-            <div>This is a About Page 4</div>
-            <div>This is a About Page 5</div>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <h1>About Us</h1>
         </div>
         </>
     )

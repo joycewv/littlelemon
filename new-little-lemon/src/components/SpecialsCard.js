@@ -1,4 +1,5 @@
 import { VStack, Image, Heading, Text, HStack } from "@chakra-ui/react"
+import { Link } from "react-router-dom"
 
 
 const SpecialsCard = ({title, description, imageSrc, price}) => {
@@ -13,7 +14,7 @@ const SpecialsCard = ({title, description, imageSrc, price}) => {
                 </HStack>
                 <Text color={'#495e57'} fontSize={'lg'}>{description}</Text>
                 <HStack>
-                    <p spacing={2} alignItems={'center'}>Order a delivery</p>
+                    <Link to="/orderonlines" spacing={2} alignItems={'center'} fontWeight={'bold'}>Order a delivery</Link>
                 </HStack>
             </VStack>
         </VStack>

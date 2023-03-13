@@ -38,7 +38,7 @@ const Footer = () => {
                     </Stack>
                     <Stack align={'flex-start'}>
                         <Text fontWeight={'500'} fontSize={'2xl'} mb={2}>Company</Text>
-                        <Link href={'#'}>Home</Link>
+                        <Link href={'/'}>Home</Link>
                         <Link href={'/about'}>About</Link>
                         <Link href={'/menu'}>Menu</Link>
                         <Link onClick={handleClick("booking")}>Reservations</Link>
@@ -47,9 +47,12 @@ const Footer = () => {
                     </Stack>
                     <Stack align={'flex-start'}>
                         <Text fontWeight={'500'} fontSize={'2xl'} mb={2}>Contact Us</Text>
-                        <Link href={'#'}>Address</Link>
-                        <Link href={'#'}>Phone number</Link>
-                        <Link href={'#'}>Email</Link>
+                        <Text fontWeight={'semibold'}>Address:</Text>
+                        <Text>00 Little Lemon Street</Text>
+                        <Text fontWeight={'semibold'}>Phone number:</Text>
+                        <Text>0-000-000-000</Text>
+                        <Text fontWeight={'semibold'}>Email:</Text>
+                        <Text>hi@littlelemon.test</Text>
                     </Stack>
                     <Stack align={'flex-start'}>
                         <Text fontWeight={'500'} fontSize={'2xl'} mb={2}>Social Media Links</Text>

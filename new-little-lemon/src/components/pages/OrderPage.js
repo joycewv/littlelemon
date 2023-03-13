@@ -6,11 +6,11 @@ const OrderPage =() => {
     return (
         <>
            <Nav></Nav>
-           <div>This is a Order Page 1</div>
-           <div>This is a Order Page 2</div>
-           <div>This is a Order Page 3</div>
-           <div>This is a Order Page 4</div>
-           <div>This is a Order Page 5</div>
+           <br></br>
+           <br></br>
+           <br></br>
+           <br></br>
+           <h1>Order a deliver</h1>
         </>
     )
 }
